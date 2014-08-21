@@ -44,11 +44,11 @@ describe 'creating or editing an rsvp' do
         end
 
         it "should allow the user to update their gender" do
-          expect(page.find("#user_gender").value).to eq(@user.gender)
-          fill_in "user_gender", with: "human"
+          expect(page.find("#rsvp_user_gender").value).to eq(@user.gender)
+          fill_in "rsvp_user_gender", with: "human"
           click_on "Submit"
           visit edit_user_registration_path
-          expect(page.find("#user_gender").value).to eq("human")
+          expect(page.find("#rsvp_user_gender").value).to eq("human")
         end
 
         it "should allow the user to affiliate themselves with the event's chapter" do
